@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Deep Learning Image Classifier</h1>
+        <p>Upload an image to classify it using a pre-trained deep learning model</p>
+        
+        <div class="upload-container">
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" id="image-upload" name="image" accept="image/*">
+                    <label for="image-upload" class="file-label">Choose an image</label>
+                </div>
+                <button type="submit" id="classify-btn">Classify Image</button>
+            </form>
+        </div>
+        
+        <div class="results-container" id="results-container">
+            <div class="image-preview">
+                <img id="preview-image" src="" alt="Preview">
+            </div>
+            <div class="predictions" id="predictions">
+                <h2>Predictions</h2>
+                <div class="loader" id="loader"></div>
+                <ul id="prediction-list"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

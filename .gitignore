@@ -1,0 +1,21 @@
+# Create a .gitignore file
+echo "# Python virtual environment
+myenv/
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Uploaded images
+static/uploads/*
+!static/uploads/.gitkeep
+
+# Other
+.DS_Store
+.env
+.vscode/
+" > .gitignore
