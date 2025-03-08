@@ -13,7 +13,7 @@ class ImageClassifier:
         )
         # Get the full ImageNet labels
         self.labels = self.get_imagenet_labels()
-
+    #this is a imagnrt function
     def get_imagenet_labels(self):
         # Use TensorFlow's built-in ImageNet class names
         return tf.keras.applications.mobilenet_v2.decode_predictions(
